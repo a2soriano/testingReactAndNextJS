@@ -1,7 +1,9 @@
 # Inspectable calling card
 
-A React calling card with drag rotation, front and back faces, and editable name
-and finishes. Read [TUTORIAL.md](TUTORIAL.md) for how it works.
+A minimal React page showing a single 3D calling card with a name on both faces.
+Drag to rotate it, or focus it and use the arrow keys. Double-click, Home, or
+Escape restores the starting angle. Change `CARD_NAME` in `src/main.jsx` to set
+the name. Read [TUTORIAL.md](TUTORIAL.md) for how it works.
 
 ## Run locally
 

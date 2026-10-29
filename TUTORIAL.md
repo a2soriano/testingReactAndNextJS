@@ -2,7 +2,8 @@
 
 Run `npm ci`, then `npm run dev`. Run `npm run build` to create the production site.
 
-This example uses React and CSS 3D. It recreates the general inspect-and-flip interaction, rather than claiming to reproduce Card Tycoon's implementation.
+The page shows only a card and its name. React and CSS 3D provide the inspection
+interaction; this example does not reproduce Card Tycoon's implementation.
 
 ## 1. Create a scene
 
@@ -14,13 +15,19 @@ In `src/style.css`, `.stage` uses `perspective: 1100px`. Perspective gives the c
 
 ## 3. Map dragging to rotation
 
-In `src/main.jsx`, pointer-down records the cursor and current rotation. Pointer-move adds horizontal displacement to Y rotation and subtracts vertical displacement from X rotation. X is limited to 75 degrees in either direction. Pointer capture keeps receiving movement outside the stage; `touch-action: none` enables touch dragging inside it. Pointer-up/cancel ends the gesture.
+In `src/main.jsx`, pointer-down records the cursor and current rotation. Pointer-move adds horizontal displacement to Y rotation and subtracts vertical displacement from X rotation. X is limited to 75 degrees in either direction. Pointer capture keeps receiving movement outside the card; `touch-action: none` enables touch dragging on it. Pointer-up/cancel ends the gesture.
 
-The transform is `rotateX(x) rotateY(y)`. Order matters! Flip adds 180 degrees to Y; reset restores the initial angle. Buttons provide an alternative to dragging.
+The transform is `rotateX(x) rotateY(y)`. Horizontal dragging adds half the
+pointer displacement to Y; vertical dragging subtracts 0.4 times the displacement
+from X. The starting angle is X = -12 degrees, Y = -22 degrees.
+
+Focus the card and use the arrow keys to turn it in 10-degree steps. Double-click,
+Home, or Escape restores the starting angle. There are no visible controls.
 
 ## 4. Personalize
 
-Change the initial `name` state, or type into the name field. Replace the role text in the front face and add your contact information to the back. The finish changes CSS variables used by both faces. The foil is a static gradient overlay; it is not a physically simulated holographic material.
+Change `CARD_NAME` in `src/main.jsx` to replace `A. Soriano`. The same name appears
+on both faces. Edit the backgrounds in `src/style.css` to change the card's finish.
 
 ## Next.js version
 
