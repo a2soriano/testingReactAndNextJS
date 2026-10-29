@@ -1,6 +1,7 @@
 # Inspectable calling card
 
-A minimal React page showing a single 3D calling card with a name on both faces.
+A minimal React page showing a landscape 3D calling card with a name on both
+faces. Its 7:4 proportions match a 3.5 × 2 inch business card.
 Drag to rotate it, or focus it and use the arrow keys. Double-click, Home, or
 Escape restores the starting angle. Change `CARD_NAME` in `src/main.jsx` to set
 the name. Read [TUTORIAL.md](TUTORIAL.md) for how it works.

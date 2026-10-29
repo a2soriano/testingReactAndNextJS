@@ -19,14 +19,14 @@ body { margin: 0; }
 
 .card {
   position: relative;
-  width: min(72vw, 300px, 52svh);
-  aspect-ratio: 63 / 88;
+  width: min(84vw, 480px, 88svh);
+  aspect-ratio: 7 / 4;
   transform-style: preserve-3d;
   touch-action: none;
   user-select: none;
   -webkit-user-select: none;
   cursor: grab;
-  border-radius: 17px;
+  border-radius: 14px;
 }
 
 .card:active { cursor: grabbing; }

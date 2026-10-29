@@ -2,7 +2,9 @@
 
 Run `npm ci`, then `npm run dev`. Run `npm run build` to create the production site.
 
-The page shows only a card and its name. React and CSS 3D provide the inspection
+The page shows only a landscape card and its name. Its CSS aspect ratio is 7:4,
+matching the proportions of a 3.5 × 2 inch business card.
+React and CSS 3D provide the inspection
 interaction; this example does not reproduce Card Tycoon's implementation.
 
 ## 1. Create a scene
